@@ -24,9 +24,9 @@ const IntroSection = () => {
 
         {/* Decorative elements at bottom */}
         <div className="flex space-x-8 mt-20">
-          <div className="w-16 h-14 bg-gray-800 rounded-lg"><img src="https://raw.githubusercontent.com/SukhvirKooner/screenshot-to-landing-page/main/public/images/box1.png" alt="" /></div>
-          <div className="w-16 h-14 bg-gray-800 rounded-lg"><img src="https://raw.githubusercontent.com/SukhvirKooner/screenshot-to-landing-page/main/public/images/box2.png" alt="" /></div>
-          <div className="w-16 h-14 bg-gray-800 rounded-lg"><img src="https://raw.githubusercontent.com/SukhvirKooner/screenshot-to-landing-page/main/public/images/box3.png" alt="" /></div>
+          <div className="w-16 h-14 bg-gray-800 rounded-lg"><img src="https://raw.githubusercontent.com/SukhvirKooner/wegic/main/public/images/box1.png" alt="" /></div>
+          <div className="w-16 h-14 bg-gray-800 rounded-lg"><img src="https://raw.githubusercontent.com/SukhvirKooner/wegic/main/public/images/box2.png" alt="" /></div>
+          <div className="w-16 h-14 bg-gray-800 rounded-lg"><img src="https://raw.githubusercontent.com/SukhvirKooner/wegic/main/public/images/box3.png" alt="" /></div>
         </div>
       </div>
     </div>
