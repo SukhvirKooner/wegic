@@ -44,35 +44,39 @@ const HeroSection = () => {
       {/* Silhouette shadow */}
       <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none select-none">
         <svg
-          width="600"
-          height="900"
-          viewBox="0 0 320 480"
-          fill="black"
-          fillOpacity="0.7"
-          style={{
-            filter: `
-              drop-shadow(${(mousePosition.x - window.innerWidth/2)/8}px ${(mousePosition.y - window.innerHeight/2)/8}px 120px rgba(0,0,0,0.95))
-              drop-shadow(${(mousePosition.x - window.innerWidth/2)/16}px ${(mousePosition.y - window.innerHeight/2)/16}px 24px rgba(0,0,0,0.85))
-            `
-          }}
-        >
-          {/* Triangular face */}
-          <path d="M160 40 L220 120 L100 120 Z" />
-          {/* Small neck */}
-          <rect x="140" y="120" width="40" height="30" rx="5" />
-          {/* Slimmer body */}
-          <rect x="85" y="150" width="150" height="250" rx="75" />
-          {/* Left arm with shoulder curve */}
-          <path d="M85 170 C75 165, 65 160, 55 150 L45 100" stroke="black" strokeWidth="20" fill="none" />
-          {/* Right arm with shoulder curve */}
-          <path d="M235 170 C245 165, 255 160, 265 150 L275 100" stroke="black" strokeWidth="20" fill="none" />
-          {/* Left hand */}
-          <path d="M45 100 C35 90, 35 80, 45 70 C55 60, 65 70, 65 80 C65 90, 55 100, 45 100" />
-          {/* Right hand */}
-          <path d="M275 100 C285 90, 285 80, 275 70 C265 60, 255 70, 255 80 C255 90, 265 100, 275 100" />
-          {/* Base */}
-          <ellipse cx="160" cy="470" rx="90" ry="40" />
-        </svg>
+  width="600"
+  height="900"
+  viewBox="0 0 320 480"
+  fill="black"
+  fillOpacity="0.7"
+  style={{
+    filter: `
+      drop-shadow(${(mousePosition.x - window.innerWidth/2)/8}px ${(mousePosition.y - window.innerHeight/2)/8}px 120px rgba(0,0,0,0.95))
+      drop-shadow(${(mousePosition.x - window.innerWidth/2)/16}px ${(mousePosition.y - window.innerHeight/2)/16}px 24px rgba(0,0,0,0.85))
+    `
+  }}
+>
+  {/* Triangular face */}
+  <path d="M160 40 L220 120 L100 120 Z" />
+  {/* Small neck */}
+  <rect x="140" y="120" width="40" height="30" rx="5" />
+  {/* Square body */}
+  <rect x="110" y="150" width="100" height="200" rx="20" />
+
+  {/* Left arm - moved closer */}
+  <path d="M110 170 C100 165, 90 160, 80 150 L70 100" stroke="black" strokeWidth="20" fill="none" />
+  {/* Right arm - moved closer */}
+  <path d="M210 170 C220 165, 230 160, 240 150 L250 100" stroke="black" strokeWidth="20" fill="none" />
+
+  {/* Left hand */}
+  <path d="M70 100 C60 90, 60 80, 70 70 C80 60, 90 70, 90 80 C90 90, 80 100, 70 100" />
+  {/* Right hand */}
+  <path d="M250 100 C260 90, 260 80, 250 70 C240 60, 230 70, 230 80 C230 90, 240 100, 250 100" />
+  
+  {/* Base */}
+  <ellipse cx="160" cy="470" rx="90" ry="40" />
+</svg>
+
       </div>
       
       <div className="relative z-20 pt-32 pb-20 px-6">
@@ -85,9 +89,9 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheadline */}
-          <div className="mb-12 text-orange-400 text-lg">
-            👋 Hey! We're Wegic. Chat with us, share your website vision, and we'll build it in 1 minute.
-          </div>
+          <div className="mb-12 text-white text-lg">
+  👋 Hey! We're Wegic. Chat with us, share your website vision, and we'll build it in 1 minute.
+</div>
 
           {/* Chat box */}
           <div className="max-w-4xl mx-auto mb-16">
