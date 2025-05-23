@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from "motion/react";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { HeroHighlight } from "./ui/hero-highlight"; // Adjust the import path as needed
 
 const Arrow = () => (
@@ -12,41 +13,82 @@ const Arrow = () => (
 const ProcessSection = () => {
   return (
     <HeroHighlight> {/* Aceternity animated background wrapper */}
-    <div className="absolute inset-0 z-0 pointer-events-none" style={{backgroundImage: 'radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px)', backgroundSize: '40px 40px'}} />
+      <div className="absolute inset-0 z-0 pointer-events-none" style={{backgroundImage: 'radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px)', backgroundSize: '40px 40px'}} />
         
-        <h2 className="text-5xl md:text-6xl font-bold text-white">Anything you want, just tell your AI team</h2>
+      <h2 className="text-5xl md:text-6xl font-bold text-white">
+        Anything you want, just tell your AI team
+      </h2>
       <div className="relative z-10 py-24 px-6 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-0">
         
         {/* Card 1 */}
-        <div className="flex-1 flex justify-center">
-          <div className="rounded-3xl p-0 flex flex-col justify-center items-center shadow-2xl bg-black border border-gray-300/30 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/30 hover:border-blue-400 rotate-[-8deg]" style={{ minWidth: 280, maxWidth: 380 }}>
-            <img src="https://raw.githubusercontent.com/SukhvirKooner/wegic/main/public/images/build.png" alt="Build in 10s" className="w-full object-contain rounded-3xl max-h-80" />
-          </div>
-        </div>
-
-        {/* Arrow 1 */}
+        <CardContainer className="inter-var">
+          <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto h-auto rounded-xl p-6 border bg-transparent">
+            <CardItem translateZ="100" className="w-full">
+              <div className="flex-1 flex justify-center">
+                <div
+                  className="rounded-3xl flex flex-col justify-center items-center shadow-2xl bg-black border border-gray-300/30 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/30 hover:border-blue-400 rotate-[-8deg]"
+                  style={{ minWidth: 280, maxWidth: 380 }}
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/SukhvirKooner/wegic/main/public/images/build.png"
+                    alt="Build in 10s"
+                    className="w-full object-contain rounded-3xl max-h-80"
+                  />
+                </div>
+              </div>
+            </CardItem>
+          </CardBody>
+        </CardContainer>
+        
+        {/* Arrow */}
         <div className="hidden md:flex flex-col items-center justify-center mx-2">
           <Arrow />
         </div>
 
         {/* Card 2 */}
-        <div className="flex-1 flex justify-center">
-          <div className="rounded-3xl p-0 flex flex-col justify-center items-center shadow-2xl bg-black border border-gray-300/30 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/30 hover:border-blue-400 rotate-0" style={{ minWidth: 280, maxWidth: 380 }}>
-            <img src="https://raw.githubusercontent.com/SukhvirKooner/wegic/main/public/images/edit.png" alt="Edit easily" className="w-full object-contain rounded-3xl max-h-80" />
-          </div>
-        </div>
+        <CardContainer className="inter-var">
+          <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto h-auto rounded-xl p-6 border bg-transparent">
+            <CardItem translateZ="100" className="w-full">
+              <div className="flex-1 flex justify-center">
+                <div
+                  className="rounded-3xl flex flex-col justify-center items-center shadow-2xl bg-black border border-gray-300/30 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/30 hover:border-blue-400 rotate-0"
+                  style={{ minWidth: 280, maxWidth: 380 }}
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/SukhvirKooner/wegic/main/public/images/edit.png"
+                    alt="Edit easily"
+                    className="w-full object-contain rounded-3xl max-h-80"
+                  />
+                </div>
+              </div>
+            </CardItem>
+          </CardBody>
+        </CardContainer>
 
-        {/* Arrow 2 */}
+        {/* Arrow */}
         <div className="hidden md:flex flex-col items-center justify-center mx-2">
           <Arrow />
         </div>
 
         {/* Card 3 */}
-        <div className="flex-1 flex justify-center">
-          <div className="rounded-3xl p-0 flex flex-col justify-center items-center shadow-2xl bg-black border border-gray-300/30 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/30 hover:border-blue-400 rotate-[8deg]" style={{ minWidth: 280, maxWidth: 380 }}>
-            <img src="https://raw.githubusercontent.com/SukhvirKooner/wegic/main/public/images/publish.png" alt="Go live in 1 click" className="w-full object-contain rounded-3xl max-h-80" />
-          </div>
-        </div>
+        <CardContainer className="inter-var">
+          <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto h-auto rounded-xl p-6 border bg-transparent">
+            <CardItem translateZ="100" className="w-full">
+              <div className="flex-1 flex justify-center">
+                <div
+                  className="rounded-3xl flex flex-col justify-center items-center shadow-2xl bg-black border border-gray-300/30 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/30 hover:border-blue-400 rotate-[8deg]"
+                  style={{ minWidth: 280, maxWidth: 380 }}
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/SukhvirKooner/wegic/main/public/images/publish.png"
+                    alt="Go live in 1 click"
+                    className="w-full object-contain rounded-3xl max-h-80"
+                  />
+                </div>
+              </div>
+            </CardItem>
+          </CardBody>
+        </CardContainer>
       </div>
     </HeroHighlight>
   );

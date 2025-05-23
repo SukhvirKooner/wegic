@@ -1,4 +1,5 @@
 import React from 'react';
+import { TextAnimate } from "@/components/ui/text-animate"
 
 const IntroSection = () => {
   return (
@@ -6,15 +7,16 @@ const IntroSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
           <h2 className="text-2xl font-normal mb-8 transition-transform duration-300 hover:scale-105 inline-block">
-            Hi, We're <span className="italic font-bold">wegic</span>
+            <TextAnimate text="Hi, We're wegic" type="calmInUp" />
           </h2>
           
           <h3 className="text-6xl md:text-7xl font-bold leading-tight mb-12 transition-transform duration-300 hover:scale-105 inline-block">
-            Your AI website team: designer, developer, and manager.
+            
+            <TextAnimate text="Your AI website team: designer, developer, and manager." type="calmInUp" />
           </h3>
           
           <p className="text-4xl md:text-5xl font-light leading-relaxed mb-16 text-gray-300 transition-transform duration-300 hover:scale-105 inline-block">
-            Just chat with us, and we'll build, manage, and effortlessly update your site.
+            <TextAnimate text="Just chat with us, and we'll build, manage, and effortlessly update your site." type="calmInUp" />
           </p>
           
           <h4 className="text-4xl md:text-5xl font-light text-gray-300 transition-transform duration-300 hover:scale-105 inline-block">

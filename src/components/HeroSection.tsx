@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-
+import { PlaceholdersAndVanishInput } from "./ui/placeholders-and-vanish-input";
 const HeroSection = () => {
   // Rotating placeholder strings
   const placeholders = [
@@ -9,6 +9,15 @@ const HeroSection = () => {
     'I need an online store hero section.',
     "Let's build a blog landing page.",
   ];
+ 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value);
+  };
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("submitted");
+  };
+
 
   const [idx, setIdx] = useState(0);
   const [chatText, setChatText] = useState('');
@@ -112,30 +121,16 @@ const HeroSection = () => {
           </div>
 
           {/* Chat box */}
-          <div className="max-w-4xl mx-auto mb-16">
+          <div className="max-w-2xl mx-auto mb-16">
             <div className="bg-white rounded-2xl p-6 text-black text-left shadow-2xl">
 
-              {/* Editable input with rotating placeholder */}
+              
               <div className="relative">
-                <input
-                  type="text"
-                  value={chatText}
-                  onChange={(e) => setChatText(e.target.value)}
-                  placeholder={placeholders[idx]}
-                  className="w-full bg-gray-100 rounded-xl px-4 py-3 text-gray-600 placeholder-gray-600 outline-none animate-slide-in-placeholder"
+                <PlaceholdersAndVanishInput
+                  placeholders={placeholders}
+                  onChange={handleChange}
+                   onSubmit={onSubmit}
                 />
-
-                <button className="absolute right-4 top-1/2 transform -translate-y-1/2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-gray-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-                  </svg>
-                </button>
               </div>
 
               {/* Action buttons */}
@@ -152,6 +147,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
+
 
           {/* Categories */}
           <div className="flex flex-wrap justify-center gap-4 mb-16">
