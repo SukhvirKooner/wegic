@@ -20,7 +20,7 @@ const ProcessSection = () => {
         {/* Card 1 */}
         <div className="flex-1 flex justify-center">
           <div className="rounded-3xl p-0 flex flex-col justify-center items-center shadow-2xl bg-black border border-gray-300/30 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/30 hover:border-blue-400 rotate-[-8deg]" style={{ minWidth: 280, maxWidth: 380 }}>
-            <img src="https://raw.githubusercontent.com/SukhvirKooner/screenshot-to-landing-page/main/public/images/build.png" alt="Build in 10s" className="w-full object-contain rounded-3xl max-h-80" />
+            <img src="https://raw.githubusercontent.com/SukhvirKooner/wegic/main/public/images/build.png" alt="Build in 10s" className="w-full object-contain rounded-3xl max-h-80" />
           </div>
         </div>
 
@@ -32,7 +32,7 @@ const ProcessSection = () => {
         {/* Card 2 */}
         <div className="flex-1 flex justify-center">
           <div className="rounded-3xl p-0 flex flex-col justify-center items-center shadow-2xl bg-black border border-gray-300/30 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/30 hover:border-blue-400 rotate-0" style={{ minWidth: 280, maxWidth: 380 }}>
-            <img src="https://raw.githubusercontent.com/SukhvirKooner/screenshot-to-landing-page/main/public/images/edit.png" alt="Edit easily" className="w-full object-contain rounded-3xl max-h-80" />
+            <img src="https://raw.githubusercontent.com/SukhvirKooner/wegic/main/public/images/edit.png" alt="Edit easily" className="w-full object-contain rounded-3xl max-h-80" />
           </div>
         </div>
 
@@ -44,7 +44,7 @@ const ProcessSection = () => {
         {/* Card 3 */}
         <div className="flex-1 flex justify-center">
           <div className="rounded-3xl p-0 flex flex-col justify-center items-center shadow-2xl bg-black border border-gray-300/30 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/30 hover:border-blue-400 rotate-[8deg]" style={{ minWidth: 280, maxWidth: 380 }}>
-            <img src="https://raw.githubusercontent.com/SukhvirKooner/screenshot-to-landing-page/main/public/images/publish.png" alt="Go live in 1 click" className="w-full object-contain rounded-3xl max-h-80" />
+            <img src="https://raw.githubusercontent.com/SukhvirKooner/wegic/main/public/images/publish.png" alt="Go live in 1 click" className="w-full object-contain rounded-3xl max-h-80" />
           </div>
         </div>
       </div>
