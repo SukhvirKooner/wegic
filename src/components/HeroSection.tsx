@@ -8,7 +8,7 @@ const HeroSection = () => {
     'Describe your dream website…',
     'Show me a sleek portfolio layout.',
     'I need an online store hero section.',
-    'Let’s build a blog landing page.',
+    'Let\'s build a blog landing page.',
   ];
   const [idx, setIdx] = useState(0);
   const [chatText, setChatText] = useState('');
@@ -37,7 +37,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 pointer-events-none z-0"
         style={{
-          background: `radial-gradient(circle 600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.18) 30%, transparent 70%)`
+          background: `radial-gradient(circle 1000px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.35) 30%, transparent 70%)`
         }}
       />
 
@@ -56,8 +56,21 @@ const HeroSection = () => {
             `
           }}
         >
-          <ellipse cx="160" cy="120" rx="90" ry="120" />
-          <rect x="55" y="200" width="210" height="250" rx="90" />
+          {/* Triangular face */}
+          <path d="M160 40 L220 120 L100 120 Z" />
+          {/* Small neck */}
+          <rect x="140" y="120" width="40" height="30" rx="5" />
+          {/* Slimmer body */}
+          <rect x="85" y="150" width="150" height="250" rx="75" />
+          {/* Left arm with shoulder curve */}
+          <path d="M85 170 C75 165, 65 160, 55 150 L45 100" stroke="black" strokeWidth="20" fill="none" />
+          {/* Right arm with shoulder curve */}
+          <path d="M235 170 C245 165, 255 160, 265 150 L275 100" stroke="black" strokeWidth="20" fill="none" />
+          {/* Left hand */}
+          <path d="M45 100 C35 90, 35 80, 45 70 C55 60, 65 70, 65 80 C65 90, 55 100, 45 100" />
+          {/* Right hand */}
+          <path d="M275 100 C285 90, 285 80, 275 70 C265 60, 255 70, 255 80 C255 90, 265 100, 275 100" />
+          {/* Base */}
           <ellipse cx="160" cy="470" rx="90" ry="40" />
         </svg>
       </div>
