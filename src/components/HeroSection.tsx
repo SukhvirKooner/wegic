@@ -1,86 +1,104 @@
-// components/HeroSection.jsx
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
-  // rotating placeholder strings
+  // Rotating placeholder strings
   const placeholders = [
     'Describe your dream website…',
     'Show me a sleek portfolio layout.',
     'I need an online store hero section.',
-    'Let\'s build a blog landing page.',
+    "Let's build a blog landing page.",
   ];
+
   const [idx, setIdx] = useState(0);
   const [chatText, setChatText] = useState('');
 
-  // cycle placeholder every 3 seconds
+  // Cycle placeholder every 3 seconds
   useEffect(() => {
     const timer = setInterval(() => {
-      setIdx(i => (i + 1) % placeholders.length);
+      setIdx((i) => (i + 1) % placeholders.length);
     }, 3000);
+
     return () => clearInterval(timer);
   }, []);
 
-  // flashlight mouse effect
+  // Flashlight mouse effect
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
   useEffect(() => {
-    const handleMouseMove = e => {
+    const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
+
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
+
       {/* Cursor flashlight effect */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none z-0"
         style={{
-          background: `radial-gradient(circle 1000px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.35) 30%, transparent 70%)`
+          background: `radial-gradient(circle 1000px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.35) 30%, transparent 70%)`,
         }}
       />
 
       {/* Silhouette shadow */}
       <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none select-none">
         <svg
-  width="600"
-  height="900"
-  viewBox="0 0 320 480"
-  fill="black"
-  fillOpacity="0.7"
-  style={{
-    filter: `
-      drop-shadow(${(mousePosition.x - window.innerWidth/2)/8}px ${(mousePosition.y - window.innerHeight/2)/8}px 120px rgba(0,0,0,0.95))
-      drop-shadow(${(mousePosition.x - window.innerWidth/2)/16}px ${(mousePosition.y - window.innerHeight/2)/16}px 24px rgba(0,0,0,0.85))
-    `
-  }}
->
-  {/* Triangular face */}
-  <path d="M160 40 L220 120 L100 120 Z" />
-  {/* Small neck */}
-  <rect x="140" y="120" width="40" height="30" rx="5" />
-  {/* Square body */}
-  <rect x="110" y="150" width="100" height="200" rx="20" />
+          width="600"
+          height="900"
+          viewBox="0 0 320 480"
+          fill="black"
+          fillOpacity="0.7"
+          style={{
+            filter: `
+              drop-shadow(${(mousePosition.x - window.innerWidth / 2) / 8}px ${(mousePosition.y - window.innerHeight / 2) / 8}px 120px rgba(0,0,0,0.95))
+              drop-shadow(${(mousePosition.x - window.innerWidth / 2) / 16}px ${(mousePosition.y - window.innerHeight / 2) / 16}px 24px rgba(0,0,0,0.85))
+            `,
+          }}
+        >
+          {/* Triangular face */}
+          <path d="M160 40 L220 120 L100 120 Z" />
 
-  {/* Left arm - moved closer */}
-  <path d="M110 170 C100 165, 90 160, 80 150 L70 100" stroke="black" strokeWidth="20" fill="none" />
-  {/* Right arm - moved closer */}
-  <path d="M210 170 C220 165, 230 160, 240 150 L250 100" stroke="black" strokeWidth="20" fill="none" />
+          {/* Small neck */}
+          <rect x="140" y="120" width="40" height="30" rx="5" />
 
-  {/* Left hand */}
-  <path d="M70 100 C60 90, 60 80, 70 70 C80 60, 90 70, 90 80 C90 90, 80 100, 70 100" />
-  {/* Right hand */}
-  <path d="M250 100 C260 90, 260 80, 250 70 C240 60, 230 70, 230 80 C230 90, 240 100, 250 100" />
-  
-  {/* Base */}
-  <ellipse cx="160" cy="470" rx="90" ry="40" />
-</svg>
+          {/* Square body */}
+          <rect x="110" y="150" width="100" height="200" rx="20" />
 
+          {/* Left arm - moved closer */}
+          <path
+            d="M110 170 C100 165, 90 160, 80 150 L70 100"
+            stroke="black"
+            strokeWidth="20"
+            fill="none"
+          />
+
+          {/* Right arm - moved closer */}
+          <path
+            d="M210 170 C220 165, 230 160, 240 150 L250 100"
+            stroke="black"
+            strokeWidth="20"
+            fill="none"
+          />
+
+          {/* Left hand */}
+          <path d="M70 100 C60 90, 60 80, 70 70 C80 60, 90 70, 90 80 C90 90, 80 100, 70 100" />
+
+          {/* Right hand */}
+          <path d="M250 100 C260 90, 260 80, 250 70 C240 60, 230 70, 230 80 C230 90, 240 100, 250 100" />
+
+          {/* Base */}
+          <ellipse cx="160" cy="470" rx="90" ry="40" />
+        </svg>
       </div>
-      
+
       <div className="relative z-20 pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
+
           {/* Headline */}
           <h1 className="text-7xl md:text-8xl font-bold mb-8 leading-tight">
             Magic Your Site
@@ -90,34 +108,31 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <div className="mb-12 text-white text-lg">
-  👋 Hey! We're Wegic. Chat with us, share your website vision, and we'll build it in 1 minute.
-</div>
+            👋 Hey! We're Wegic. Chat with us, share your website vision, and we'll build it in 1 minute.
+          </div>
 
           {/* Chat box */}
           <div className="max-w-4xl mx-auto mb-16">
             <div className="bg-white rounded-2xl p-6 text-black text-left shadow-2xl">
 
               {/* Editable input with rotating placeholder */}
-              <div className=" relative">
+              <div className="relative">
                 <input
                   type="text"
                   value={chatText}
-                  onChange={e => setChatText(e.target.value)}
+                  onChange={(e) => setChatText(e.target.value)}
                   placeholder={placeholders[idx]}
-                  className="
-                    w-full
-                    bg-gray-100
-                    rounded-xl
-                    px-4
-                    py-3
-                    text-gray-600
-                    placeholder-gray-600
-                    outline-none
-                    animate-slide-in-placeholder
-                  "
+                  className="w-full bg-gray-100 rounded-xl px-4 py-3 text-gray-600 placeholder-gray-600 outline-none animate-slide-in-placeholder"
                 />
+
                 <button className="absolute right-4 top-1/2 transform -translate-y-1/2">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-gray-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                   </svg>
                 </button>
@@ -128,11 +143,13 @@ const HeroSection = () => {
                 <Button className="bg-black text-white hover:bg-gray-800 px-6 py-2 rounded-lg">
                   Build Via Chat
                 </Button>
-                <Button variant="outline" className="border-gray-300 text-gray-600 hover:bg-gray-50 px-6 py-2 rounded-lg">
+                <Button
+                  variant="outline"
+                  className="border-gray-300 text-gray-600 hover:bg-gray-50 px-6 py-2 rounded-lg"
+                >
                   Build Via Link
                 </Button>
               </div>
-
             </div>
           </div>
 
@@ -143,8 +160,8 @@ const HeroSection = () => {
               '🛒 E-commerce product page',
               '🎮 Game community',
               '📦 Product display page',
-              '🎨 Design studio'
-            ].map(label => (
+              '🎨 Design studio',
+            ].map((label) => (
               <Button
                 key={label}
                 className="bg-gray-800/50 text-white border border-gray-600 rounded-full px-6 py-3 hover:bg-gray-700"
@@ -155,16 +172,16 @@ const HeroSection = () => {
           </div>
 
           {/* Scroll hint */}
-          <div className="text-gray-400 text-sm">
-            SCROLL TO EXPLORE ⭕
-          </div>
+          <div className="text-gray-400 text-sm">SCROLL TO EXPLORE </div>
         </div>
       </div>
 
       {/* Award badge */}
       <div className="absolute bottom-8 right-8 text-right">
         <div className="bg-gray-800/50 rounded-lg p-3 text-xs border border-gray-600">
-          🏆 Golden Kitty Awards<br/><span className="font-bold">2024</span>
+          🏆 Golden Kitty Awards
+          <br />
+          <span className="font-bold">2024</span>
         </div>
       </div>
     </div>
