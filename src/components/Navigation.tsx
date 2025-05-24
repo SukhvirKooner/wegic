@@ -10,17 +10,6 @@ const Navigation = () => {
           <div className="text-white font-bold text-xl italic">
             wegic
           </div>
-          {/* <div className="hidden md:flex items-center space-x-1 bg-gray-800/50 rounded-full px-1 py-1">
-            <a href="#" className="px-4 py-2 text-gray-300 hover:text-white transition-colors rounded-full">
-              User Cases
-            </a>
-            <a href="#" className="px-4 py-2 text-gray-300 hover:text-white transition-colors rounded-full">
-              Help Center
-            </a>
-            <a href="#" className="px-4 py-2 text-gray-300 hover:text-white transition-colors rounded-full">
-              Pricing
-            </a>
-          </div> */}
         </div>
         <div className="flex items-center space-x-4">
           <div className="hidden md:flex items-center space-x-2 text-gray-300">
